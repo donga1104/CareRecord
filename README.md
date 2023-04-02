@@ -47,8 +47,8 @@ http://localhost
 
 ## Tips
 
-- Read this [Makefile](https://github.com/ucan-lab/docker-laravel/blob/main/Makefile).
-- Read this [Wiki](https://github.com/ucan-lab/docker-laravel/wiki).
+-   Read this [Makefile](https://github.com/ucan-lab/docker-laravel/blob/main/Makefile).
+-   Read this [Wiki](https://github.com/ucan-lab/docker-laravel/wiki).
 
 ## Container structures
 
@@ -60,21 +60,23 @@ http://localhost
 
 ### app container
 
-- Base image
-  - [php](https://hub.docker.com/_/php):8.1-fpm-bullseye
-  - [composer](https://hub.docker.com/_/composer):2.2
+-   Base image
+    -   [php](https://hub.docker.com/_/php):8.1-fpm-bullseye
+    -   [composer](https://hub.docker.com/_/composer):2.2
 
 ### web container
 
-- Base image
-  - [nginx](https://hub.docker.com/_/nginx):1.22
+-   Base image
+    -   [nginx](https://hub.docker.com/_/nginx):1.22
 
 ### db container
 
-- Base image
-  - [mysql/mysql-server](https://hub.docker.com/r/mysql/mysql-server):8.0
+-   Base image
+    -   [mysql/mysql-server](https://hub.docker.com/r/mysql/mysql-server):8.0
 
 ### mailhog container
 
-- Base image
-  - [mailhog/mailhog](https://hub.docker.com/r/mailhog/mailhog)
+-   Base image
+    -   [mailhog/mailhog](https://hub.docker.com/r/mailhog/mailhog)
+
+変更テスト
