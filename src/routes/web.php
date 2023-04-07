@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// 初期表示（ログイン画面）
+Route::get('/', 'App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login.index');
+
+// ユーザー登録
+Route::get('/user', 'App\Http\Controllers\Auth\RegisterController@showRegistrationForm')->name('user.register');
+
+// 診察履歴一覧
+Route::get('/medicalrecords', function () {
+    return view("medicalrecords");
+})->name('medicalrecords.index');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
