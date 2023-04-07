@@ -18,6 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/common.css') }}" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+
 </head>
 <body>
     <div id="app">
@@ -36,8 +41,9 @@
 
                     </ul>
 
+                    {{-- 開発予定なし --}}
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    {{-- <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -70,7 +76,7 @@
                                 </div>
                             </li>
                         @endguest
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </nav>
