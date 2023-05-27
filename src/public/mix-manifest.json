@@ -1,5 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/puclic/js/common.js": "/puclic/js/common.js"
+    "/puclic/js/common.js": "/puclic/js/common.js",
+    "/css/common.css": "/css/common.css"
 }

@@ -18,6 +18,17 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
+                        {{-- エラー表示 各項目の下にエラー文を表示するため必要なし（デバッグ用）
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul class="mb-0 mt-0">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif --}}
+
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('メールアドレス：') }}</label>
 

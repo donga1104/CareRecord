@@ -1,1 +1,5 @@
-診察履歴一覧画面
+@extends('layouts.nav')
+
+@section('mainContent')
+診察履歴一覧
+@endsection
