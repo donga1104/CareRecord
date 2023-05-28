@@ -3,7 +3,7 @@
 @section('mainContent')
     <div class="container">
         <div class="main-container">
-            <a href="{{ route('hospitalregistration.index') }}">「病院情報一覧」へ戻る</a>
+            <a href="{{ route('hospital-list.index') }}">「病院情報一覧」へ戻る</a>
             <h1 class="rounded-title">病院情報登録</h1>
             <div class="explanation">
                 病院の情報登録ができます。<br>

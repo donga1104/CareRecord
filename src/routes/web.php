@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// TODO: 全体的に、ケバブケースでパス名書き直す。（修正範囲気をつける） bladeファイル名も統一させる
+
 // 初期表示（ログイン画面）
 Route::get('/', 'App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login.index');
 
@@ -22,12 +24,15 @@ Route::get('/user', 'App\Http\Controllers\Auth\RegisterController@showRegistrati
 // ユーザー登録
 Route::post('/user/register', 'App\Http\Controllers\Auth\RegisterController@register')->name('user.exec.register');
 
+// TODO: 画面作成後削除
 // 診察履歴一覧
 // Route::group(['middleware' => ['auth']], function () {
 //     Route::get('/medicalrecords', function () {
 //         return view('medicalrecords');
 //     })->name('medicalrecords.index');
 // });
+
+// 診察履歴一覧
 Route::get('/medicalrecords', function () {
     return view('medicalrecords');
 })->name('medicalrecords.index')->middleware('auth');
@@ -36,6 +41,11 @@ Route::get('/medicalrecords', function () {
 Route::get('/hospitalregistration', function () {
     return view('hospitalregistration');
 })->name('hospitalregistration.index');
+
+// 病院情報一覧
+Route::get('/hospital-list', function () {
+    return view('hospital-list');
+})->name('hospital-list.index');
 
 
 // 対象者登録

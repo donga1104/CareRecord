@@ -3,6 +3,7 @@
 @section('mainContent')
     <div class="container">
         <div class="main-container">
+            {{-- //TODO: 対象者一覧画面作成後ルーティング修正 --}}
             <a href="{{ route('hospitalregistration.index') }}">「対象者一覧」へ戻る</a>
             <h1 class="rounded-title">対象者登録</h1>
             <div class="explanation">

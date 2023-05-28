@@ -13,11 +13,13 @@
                     <a class="nav-link" href="#">診察履歴一覧</a>
                 </li>
                 <li class="nav-item">
-                    {{-- <a class="nav-link" href="#">病院情報登録</a> --}}
                     <a class="nav-link" href="{{ route('hospitalregistration.index') }}">病院情報登録</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">対象者登録</a>
+                    <a class="nav-link" href="{{ route('hospital-list.index') }}">病院情報一覧</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('participantregistration.index') }}">対象者登録</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">対象者一覧</a>
