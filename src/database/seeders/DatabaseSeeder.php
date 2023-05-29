@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // TODO: 検証用ユーザーのデータ定義
         \App\Models\User::factory(10)->create();
     }
 }

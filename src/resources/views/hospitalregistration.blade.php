@@ -25,7 +25,7 @@
                     <input type="text" class="form-control bg-white" id="formGroupExampleInput" placeholder="06-0000-1111">
                 </div>
 
-                <button type="submit" class="btn btn-primary">登録する</button>
+                <a href="{{route('hospitalregistration.add')}}" button type="submit" class="btn btn-primary">登録する</button></a>
 
             </div>
         </div>

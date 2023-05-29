@@ -34,6 +34,7 @@
                 </tbody>
             </table>
 
+            {{-- //TODO: jsの挙動  --}}
             <nav aria-label="...">
                 <ul class="pagination">
                     <li class="page-item disabled">

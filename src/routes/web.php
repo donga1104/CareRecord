@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\HospitalMasterController;
+use App\Http\Controllers\MedicalRecordController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,13 +20,13 @@ use Illuminate\Support\Facades\Route;
 // TODO: 全体的に、ケバブケースでパス名書き直す。（修正範囲気をつける） bladeファイル名も統一させる
 
 // 初期表示（ログイン画面）
-Route::get('/', 'App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login.index');
+Route::get('/', [LoginController::class, 'showLoginForm'])->name('login.index');
 
 // 必要なし？？
-Route::get('/user', 'App\Http\Controllers\Auth\RegisterController@showRegistrationForm')->name('user.register');
+Route::get('/user', [RegisterController::class, 'showRegistrationForm'])->name('user.register');
 
 // ユーザー登録
-Route::post('/user/register', 'App\Http\Controllers\Auth\RegisterController@register')->name('user.exec.register');
+Route::post('/user/register', [RegisterController::class, 'register'])->name('user.exec.register');
 
 // TODO: 画面作成後削除
 // 診察履歴一覧
@@ -38,15 +42,16 @@ Route::get('/medicalrecords', function () {
 })->name('medicalrecords.index')->middleware('auth');
 
 // 病院情報登録
-Route::get('/hospitalregistration', function () {
-    return view('hospitalregistration');
-})->name('hospitalregistration.index');
+Route::get('/hospitalregistration', [HospitalMasterController::class, 'index'])->name('hospitalregistration.index');
+Route::get('/hospitalregistration/add', [HospitalMasterController::class, 'add'])->name('hospitalregistration.add');
+
 
 // 病院情報一覧
+// TODO: コントローラー作成要修正。readメソッドを作る必要ありか。
+// Route::get('/hospital-list', [HospitalMasterController::class, 'index'])->name('hospital-list.index');
 Route::get('/hospital-list', function () {
     return view('hospital-list');
 })->name('hospital-list.index');
-
 
 // 対象者登録
 Route::get('/participantregistration', function () {
