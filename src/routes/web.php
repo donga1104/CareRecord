@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 // 初期表示（ログイン画面）
 Route::get('/', [LoginController::class, 'showLoginForm'])->name('login.index');
 
+// TODO: 使用の確認。コメントの修正
 // 必要なし？？
 Route::get('/user', [RegisterController::class, 'showRegistrationForm'])->name('user.register');
 
@@ -41,6 +42,8 @@ Route::get('/medicalrecords', function () {
     return view('medicalrecords');
 })->name('medicalrecords.index')->middleware('auth');
 
+
+// TODO: HospitalMasterControllerに初期表示のルーティングいるか？viewを出すのに必要？要検討
 // 病院情報登録
 Route::get('/hospitalregistration', [HospitalMasterController::class, 'index'])->name('hospitalregistration.index');
 Route::get('/hospitalregistration/add', [HospitalMasterController::class, 'add'])->name('hospitalregistration.add');
