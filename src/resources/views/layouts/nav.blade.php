@@ -6,6 +6,7 @@
     <div class="row">
         <div class="col-md-2 navcontainer">
             <ul class="nav flex-column">
+                {{-- // TODO: css確認、画面によってはグレー背景が伸びすぎるときがある。 --}}
                 <li class="nav-item">
                     <a class="nav-link active" href="#">診察結果登録</a>
                 </li>
@@ -30,7 +31,6 @@
             </ul>
         </div>
         <div class="col-md-10">
-            <!-- ここにコンテンツを入れる -->
             @yield('mainContent')
         </div>
     </div>
